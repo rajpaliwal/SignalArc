@@ -51,3 +51,8 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(discover.router)
 app.include_router(sync.router)
+
+
+@app.get("/")
+def home():
+    return {"message": "Hello from SignalArc"}
